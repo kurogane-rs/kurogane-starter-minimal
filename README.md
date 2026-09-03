@@ -24,23 +24,23 @@ cargo generate kurogane-rs/starter-minimal --name my-app --define language=types
 ## What's included
 
 - Minimal `index.html` with entry point
-- Vite configured to build into `content/`
+- Vite configured to build into `frontend/dist`
 - Rust binary using the Kurogane runtime
 - `kurogane.toml` packaging configuration
 
 ## Development
 
 ```sh
-npm install
-npm run dev    # Start Vite dev server (port 5173)
-kurogane dev   # Launch the Kurogane desktop app
+npm --prefix frontend install
+npm --prefix frontend run dev  # Start Vite dev server (port 5173)
+kurogane dev                   # Launch the Kurogane desktop app
 ```
 
-## Building
+## Bundling
 
 ```sh
-npm run build      # Build frontend
-kurogane build     # Build the Rust binary
+npm --prefix frontend run build  # Build the frontend into frontend/dist
+kurogane bundle
 ```
 
 ## TypeScript vs JavaScript
