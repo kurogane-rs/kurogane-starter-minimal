@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6"
+{% if language == "typescript" %}    "typescript": "^5",
+{% endif %}    "vite": "^6"
   }
 }
